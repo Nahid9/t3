@@ -75,6 +75,10 @@ def preprocess_image(image_file):
     img = np.array(img) / 255.0
     img = (img - IMAGENET_MEAN) / IMAGENET_STD
     return np.expand_dims(img, axis=0)
+# icon
+@app.get("/favicon.ico")
+def favicon():
+    return FileResponse("static/favicon.ico")
 
 # Home route
 @app.get("/", response_class=HTMLResponse)
