@@ -136,7 +136,9 @@
                 </div>
                 {% if image_uploaded %}
                 <h4>Uploaded Image:</h4>
-                <img src="{{ image_data_url }}" alt="Uploaded Image" style="max-width: 300px; border: 1px solid #ccc;" />
+                <div style="max-width: 100%; display: flex; justify-content: center;">
+                    <img src="{{ image_data_url }}" alt="Uploaded Image" style="width: 100%; max-width: 300px; height: auto; border: 1px solid #ccc; border-radius: 8px;" />
+                </div>
                 {% endif %}
                 {% if explanation_plot %}
                     <div class="image-container">
