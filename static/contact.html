@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Deep Harvest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/static/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /*.container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }*/
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 30px;
+        }
+
+        p {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .contact-info div {
+            margin: 8px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message-success {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border-left: 4px solid #4CAF50;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .title-section {
+            display: flex;
+            flex-direction: column;
+        }
+        .title-section h1, .title-section p {
+            margin: 0;
+        }
+
+        .title-section p {
+            text-align: center;
+            
+        }
+        p {
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            
+            color: #4CAF50;
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            font-size: 18px;
+            text-decoration: none !important;
+        }
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title-section">
+                <a href="/" class="logo">🌱 Deep Harvest</a>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check your crop Health</p>
+            </div>
+            <nav class="nav-links">
+                <a href="/static/about.html">About Us</a>
+                <a href="/static/contact.html">Contact Us</a>
+            </nav>
+        </header>
+        <h1><br>Contact Us</h1>
+        <p>We'd love to hear from you! Whether it’s a bug, a suggestion, or feedback — reach out anytime.</p><br>
+
+        <div class="contact-info" style="display: flex; justify-content: space-between; gap: 0px;">
+            <div style="width: 55%;">
+                
+                <div><strong>Name:</strong> Esak</div>
+                <div><strong>Phone:</strong> 01722222223</div>
+                <div><strong>Email:</strong> esak@nortsouth.edu</div>
+            </div>
+            <div style="width: 55%;">
+                <div><strong>Name:</strong> Nahid</div>
+                <div><strong>Phone:</strong> 01711111110</div>
+                <div><strong>Email:</strong> nahid@northsouth.edu</div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="message-success" id="successMessage">
+            ✅ Message Sent Successfully !!!
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Deep Harvest — All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent default form submission
+            form.reset(); // reset the form
+            successMsg.style.display = 'block'; // show the success message
+        });
+    </script>
+</body>
+</html>
